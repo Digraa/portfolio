@@ -1,6 +1,8 @@
 
 import { Code, Layout, Lightbulb, PenTool } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Avatar } from '@/components/ui/avatar';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const About = () => {
   const skills = [
@@ -31,9 +33,25 @@ const About = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              About <span className="text-primary">Me</span>
-            </h2>
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-8">
+              <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg">
+                <AspectRatio ratio={1/1}>
+                  {/* Sostituisci l'URL con la tua immagine */}
+                  <img 
+                    src="/placeholder.svg" 
+                    alt="Il tuo nome" 
+                    className="object-cover w-full h-full"
+                  />
+                </AspectRatio>
+              </div>
+              
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-2">
+                  About <span className="text-primary">Me</span>
+                </h2>
+                <p className="text-muted-foreground text-lg">Web Designer & UI/UX Specialist</p>
+              </div>
+            </div>
             
             <div className="space-y-4 text-muted-foreground">
               <p>
