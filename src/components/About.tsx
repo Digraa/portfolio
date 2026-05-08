@@ -1,30 +1,34 @@
 
-import { Code, Layout, Lightbulb, PenTool } from 'lucide-react';
+import { Video, Megaphone, Palette, Share2, UserCheck } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar } from '@/components/ui/avatar';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const About = () => {
   const skills = [
     { 
-      icon: <PenTool className="h-8 w-8 text-primary" />, 
-      title: 'UI Design', 
-      description: 'Creating beautiful, intuitive interfaces that users love to interact with.' 
+      icon: <Video className="h-8 w-8 text-primary" />,
+      title: 'Video Production',
+      description: 'Produzione e montaggio video di alta qualità ottimizzati per i social.'
     },
     { 
-      icon: <Layout className="h-8 w-8 text-primary" />, 
-      title: 'UX Design', 
-      description: 'Crafting seamless user experiences that achieve business objectives.' 
+      icon: <Megaphone className="h-8 w-8 text-primary" />,
+      title: 'Advertising',
+      description: 'Campagne pubblicitarie mirate su Meta e Google per massimizzare il ROI.'
     },
     { 
-      icon: <Code className="h-8 w-8 text-primary" />, 
-      title: 'Frontend Development', 
-      description: 'Building responsive, accessible websites with modern technologies.' 
+      icon: <Palette className="h-8 w-8 text-primary" />,
+      title: 'Graphic Design',
+      description: 'Identità visiva coerente e accattivante per il tuo brand.'
     },
     { 
-      icon: <Lightbulb className="h-8 w-8 text-primary" />, 
-      title: 'Brand Strategy', 
-      description: 'Developing cohesive digital identities that resonate with target audiences.' 
+      icon: <Share2 className="h-8 w-8 text-primary" />,
+      title: 'Social Management',
+      description: 'Gestione strategica dei canali social per costruire una community attiva.'
+    },
+    {
+      icon: <UserCheck className="h-8 w-8 text-primary" />,
+      title: 'Personal Branding',
+      description: 'Posizionamento strategico per professionisti che vogliono distinguersi.'
     }
   ];
 
@@ -47,50 +51,44 @@ const About = () => {
               
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-2">
-                  About <span className="text-primary">Me</span>
+                  Su <span className="text-primary">di me</span>
                 </h2>
-                <p className="text-muted-foreground text-lg">Web Designer & UI/UX Specialist</p>
+                <p className="text-muted-foreground text-lg">Content Strategist freelance a Torino</p>
               </div>
             </div>
             
             <div className="space-y-4 text-muted-foreground">
               <p>
-                I'm a passionate web designer with over 5 years of experience creating
-                compelling digital experiences that help businesses grow online.
+                Mi chiamo Marco Di Grandi e aiuto professionisti e freelance a trasformare la propria competenza in una presenza digitale solida e riconoscibile.
               </p>
               
               <p>
-                My approach combines aesthetic sensibility with user-centered design
-                principles, ensuring that every project not only looks beautiful but also
-                delivers measurable results.
+                Non mi definisco per gli anni di esperienza, ma per la passione, la visione e la capacità di stare al passo con un settore in continua evoluzione come quello della comunicazione digitale e dell'AI.
               </p>
               
               <p>
-                I've worked with clients across various industries, from startups to
-                established companies, helping them establish their digital presence
-                and connect with their audiences through thoughtful design and
-                strategic thinking.
+                Il mio obiettivo è costruire brand personali forti nello spazio della comunicazione potenziata dall'intelligenza artificiale, offrendo soluzioni concrete a chi ha valore da comunicare ma fatica a farlo con costanza e professionalità.
               </p>
             </div>
             
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div>
-                <h3 className="text-xl font-semibold mb-2">Design Tools</h3>
+                <h3 className="text-xl font-semibold mb-2">Creatività</h3>
                 <ul className="space-y-1 text-muted-foreground">
                   <li>Figma</li>
-                  <li>Adobe XD</li>
-                  <li>Photoshop</li>
-                  <li>Illustrator</li>
+                  <li>CapCut</li>
+                  <li>Premiere Pro</li>
+                  <li>After Effects</li>
                 </ul>
               </div>
               
               <div>
-                <h3 className="text-xl font-semibold mb-2">Development</h3>
+                <h3 className="text-xl font-semibold mb-2">AI & Strategy</h3>
                 <ul className="space-y-1 text-muted-foreground">
-                  <li>HTML/CSS</li>
-                  <li>JavaScript</li>
-                  <li>React</li>
-                  <li>Tailwind CSS</li>
+                  <li>ChatGPT & Claude</li>
+                  <li>Higgsfield Cinema</li>
+                  <li>Meta Ads</li>
+                  <li>Google Ads</li>
                 </ul>
               </div>
             </div>
@@ -98,7 +96,7 @@ const About = () => {
           
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              My <span className="text-primary">Expertise</span>
+              I miei <span className="text-primary">Servizi</span>
             </h2>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

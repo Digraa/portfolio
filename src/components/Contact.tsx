@@ -31,8 +31,8 @@ const Contact = () => {
     // Simulate form submission
     setTimeout(() => {
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        title: "Messaggio inviato!",
+        description: "Grazie per avermi contattato. Ti risponderò al più presto.",
       });
       
       setFormData({
@@ -50,19 +50,13 @@ const Contact = () => {
     {
       icon: <Mail className="h-5 w-5 text-primary" />,
       title: 'Email',
-      content: 'contact@designstudio.com',
-      link: 'mailto:contact@designstudio.com',
-    },
-    {
-      icon: <Phone className="h-5 w-5 text-primary" />,
-      title: 'Phone',
-      content: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      content: 'marco@digrandi.it',
+      link: 'mailto:marco@digrandi.it',
     },
     {
       icon: <MapPin className="h-5 w-5 text-primary" />,
-      title: 'Location',
-      content: 'San Francisco, CA',
+      title: 'Sede',
+      content: 'Torino, Italia',
       link: 'https://maps.google.com',
     },
   ];
@@ -72,11 +66,10 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Get In <span className="text-primary">Touch</span>
+            Entriamo in <span className="text-primary">Contatto</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Interested in working together? Fill out the form below with some info about 
-            your project and I'll get back to you as soon as possible.
+            Vuoi collaborare o hai un progetto in mente? Compila il form qui sotto e ti risponderò il prima possibile.
           </p>
         </div>
         
@@ -87,11 +80,11 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">Name</label>
+                      <label htmlFor="name" className="text-sm font-medium">Nome</label>
                       <Input
                         id="name"
                         name="name"
-                        placeholder="Your name"
+                        placeholder="Il tuo nome"
                         value={formData.name}
                         onChange={handleChange}
                         required
@@ -104,7 +97,7 @@ const Contact = () => {
                         id="email"
                         name="email"
                         type="email"
-                        placeholder="Your email"
+                        placeholder="La tua email"
                         value={formData.email}
                         onChange={handleChange}
                         required
@@ -113,11 +106,11 @@ const Contact = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm font-medium">Subject</label>
+                    <label htmlFor="subject" className="text-sm font-medium">Oggetto</label>
                     <Input
                       id="subject"
                       name="subject"
-                      placeholder="Project inquiry"
+                      placeholder="Richiesta informazioni"
                       value={formData.subject}
                       onChange={handleChange}
                       required
@@ -125,11 +118,11 @@ const Contact = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">Message</label>
+                    <label htmlFor="message" className="text-sm font-medium">Messaggio</label>
                     <Textarea
                       id="message"
                       name="message"
-                      placeholder="Tell me about your project..."
+                      placeholder="Parlami del tuo progetto..."
                       rows={5}
                       value={formData.message}
                       onChange={handleChange}
@@ -142,7 +135,7 @@ const Contact = () => {
                     className="w-full"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {isSubmitting ? 'Invio in corso...' : 'Invia Messaggio'}
                   </Button>
                 </form>
               </CardContent>
@@ -171,12 +164,12 @@ const Contact = () => {
             
             <Card className="bg-primary/10 backdrop-blur-sm border border-primary/20 mt-8">
               <CardContent className="p-6 text-center">
-                <h3 className="font-medium text-lg mb-2">Ready to Start Your Project?</h3>
+                <h3 className="font-medium text-lg mb-2">Pronto a iniziare?</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Let's create something amazing together.
+                  Creiamo insieme qualcosa di straordinario.
                 </p>
                 <Button variant="default" asChild>
-                  <a href="mailto:contact@designstudio.com">Schedule a Call</a>
+                  <a href="mailto:marco@digrandi.it">Prenota una chiamata</a>
                 </Button>
               </CardContent>
             </Card>
