@@ -21,13 +21,12 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-            Crafting <span className="text-primary">Digital</span> Experiences <br className="hidden md:block" />
-            That <span className="text-secondary">Elevate</span> Brands
+            Comunicazione <span className="text-primary">Potenziata</span> <br className="hidden md:block" />
+            dall'<span className="text-secondary">Intelligenza</span> Artificiale
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl">
-            Web designer and UI/UX specialist creating beautiful, functional websites
-            that help businesses achieve their digital goals.
+            Trasformo la tua competenza in una presenza digitale concreta attraverso strategia, produzione e distribuzione.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
@@ -35,14 +34,14 @@ const Hero = () => {
               const portfolioSection = document.getElementById('portfolio');
               if (portfolioSection) portfolioSection.scrollIntoView({ behavior: 'smooth' });
             }} size="lg" className="px-8">
-              View My Work
+              Guarda i miei lavori
             </Button>
             
             <Button onClick={() => {
               const contactSection = document.getElementById('contact');
               if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
             }} variant="outline" size="lg" className="px-8">
-              Get in Touch
+              Contattami
             </Button>
           </div>
         </div>
@@ -52,7 +51,7 @@ const Hero = () => {
         onClick={scrollToAbout}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-foreground/70 hover:text-primary transition-colors flex flex-col items-center"
       >
-        <span className="mb-2 text-sm">Scroll Down</span>
+        <span className="mb-2 text-sm">Scopri di più</span>
         <ArrowDown className="animate-bounce" />
       </button>
     </section>

@@ -5,59 +5,43 @@ import ProjectCard, { ProjectProps } from './ProjectCard';
 
 const projectsData: ProjectProps[] = [
   {
-    title: 'E-commerce Redesign',
-    description: 'A complete redesign of an e-commerce platform focusing on improved conversion rates and mobile experience.',
+    title: 'Campagna Meta Ads',
+    description: 'Strategia e gestione di una campagna advertising su Meta per un coach professionista, con un incremento del 40% delle lead.',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3',
-    tags: ['E-commerce', 'UI Design', 'UX Research'],
-    liveUrl: 'https://example.com',
+    tags: ['Ads', 'Strategy', 'Meta'],
+    liveUrl: '#',
   },
   {
-    title: 'Financial Dashboard',
-    description: 'A comprehensive dashboard for a fintech startup, visualizing complex data in an intuitive interface.',
+    title: 'Produzione Video Social',
+    description: 'Serie di video brevi (Reels/TikTok) ottimizzati per l\'algoritmo, focalizzati sul personal branding e l\'autorità.',
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3',
-    tags: ['Dashboard', 'Data Visualization', 'Fintech'],
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    tags: ['Video', 'Editing', 'Social'],
+    liveUrl: '#',
   },
   {
-    title: 'Travel App',
-    description: 'A mobile-first travel planning application with integrated booking and itinerary management.',
+    title: 'Brand Identity Digitale',
+    description: 'Creazione di un\'identità visiva coerente e professionale per un consulente finanziario su LinkedIn e Instagram.',
     image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3',
-    tags: ['Mobile App', 'Travel', 'UX Design'],
-    liveUrl: 'https://example.com',
+    tags: ['Design', 'Branding'],
+    liveUrl: '#',
   },
   {
-    title: 'Restaurant Website',
-    description: 'An elegant website for a high-end restaurant, featuring online reservations and menu showcase.',
+    title: 'Content Strategy AI',
+    description: 'Implementazione di workflow basati su AI per la creazione costante di contenuti di valore per uno studio di architettura.',
     image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3',
-    tags: ['Restaurant', 'Web Design', 'Booking System'],
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
-  },
-  {
-    title: 'Healthcare Portal',
-    description: 'A patient management portal for a healthcare provider, focusing on accessibility and ease of use.',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3',
-    tags: ['Healthcare', 'Portal', 'Accessibility'],
-    liveUrl: 'https://example.com',
-  },
-  {
-    title: 'Photography Portfolio',
-    description: 'A minimalist portfolio website for a professional photographer with gallery and client access.',
-    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3',
-    tags: ['Portfolio', 'Photography', 'Gallery'],
-    liveUrl: 'https://example.com',
+    tags: ['AI', 'Strategy', 'Content'],
+    liveUrl: '#',
   },
 ];
 
-const categories = ['All', 'Web Design', 'Mobile App', 'E-commerce', 'Dashboard', 'UI/UX'];
+const categories = ['Tutti', 'Video', 'Ads', 'Branding', 'AI', 'Strategy'];
 
 const Portfolio = () => {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState('Tutti');
   const [visibleProjects, setVisibleProjects] = useState(4);
 
   // Filter projects based on active category
-  const filteredProjects = activeCategory === 'All'
+  const filteredProjects = activeCategory === 'Tutti'
     ? projectsData
     : projectsData.filter(project => 
         project.tags.some(tag => 
@@ -86,11 +70,10 @@ const Portfolio = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Featured <span className="text-primary">Projects</span>
+            Lavori <span className="text-primary">In evidenza</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A selection of my recent work, showcasing UI design, UX improvements, 
-            and creative problem-solving across different industries.
+            Una selezione dei miei ultimi progetti, dalla produzione video alle strategie di advertising potenziate dall'AI.
           </p>
         </div>
         
@@ -119,13 +102,13 @@ const Portfolio = () => {
         <div className="flex justify-center mt-12 gap-4">
           {hasMoreProjects && (
             <Button onClick={showMoreProjects} variant="default">
-              Load More
+              Carica altri
             </Button>
           )}
           
           {hasLessProjects && (
             <Button onClick={showLessProjects} variant="outline">
-              Show Less
+              Mostra meno
             </Button>
           )}
         </div>

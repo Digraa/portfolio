@@ -31,16 +31,16 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-xl md:text-2xl font-display font-bold">
-            <span className="text-primary">Design</span>
-            <span className="text-foreground">Studio</span>
+            <span className="text-primary">Marco</span>
+            <span className="text-foreground"> Di Grandi</span>
           </div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('home')} className="text-foreground hover:text-primary transition-colors">Home</button>
-            <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors">About</button>
+            <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors">Su di me</button>
             <button onClick={() => scrollToSection('portfolio')} className="text-foreground hover:text-primary transition-colors">Portfolio</button>
-            <Button onClick={() => scrollToSection('contact')} variant="default">Get in Touch</Button>
+            <Button onClick={() => scrollToSection('contact')} variant="default">Contattami</Button>
           </div>
           
           {/* Mobile Navigation Toggle */}
@@ -56,9 +56,9 @@ const Navbar = () => {
           <div className="md:hidden absolute left-0 right-0 top-16 bg-background/95 backdrop-blur-lg p-4 shadow-lg animate-fade-in">
             <div className="flex flex-col space-y-4">
               <button onClick={() => scrollToSection('home')} className="text-foreground hover:text-primary transition-colors py-2">Home</button>
-              <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors py-2">About</button>
+              <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors py-2">Su di me</button>
               <button onClick={() => scrollToSection('portfolio')} className="text-foreground hover:text-primary transition-colors py-2">Portfolio</button>
-              <Button onClick={() => scrollToSection('contact')} variant="default" className="w-full">Get in Touch</Button>
+              <Button onClick={() => scrollToSection('contact')} variant="default" className="w-full">Contattami</Button>
             </div>
           </div>
         )}
